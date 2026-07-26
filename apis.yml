@@ -1,7 +1,23 @@
 aid: facet
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/facet.png
 name: Facet
-description: 'Facet is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+description: 'Facet was a consumer AI image-editing and creative tool, backed by Accel and
+  originally added to the API Evangelist network as a portfolio-lead stub. As of the 2026-07-19
+  enrichment pass, its domain facet.ai (HTTP) 301-redirects to www.vsco.co/features/canvas
+  ("VSCO Canvas | AI Mood Board Maker for Photographers"), indicating the product has been
+  acquired by / absorbed into VSCO. Facet exposes no independent developer platform, public
+  API, OpenAPI, SDKs, or documentation surface of its own; its HTTPS endpoint is unreachable.'
 url: https://raw.githubusercontent.com/api-evangelist/facet/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +25,22 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired-redirected
+x-redirects-to: https://www.vsco.co/features/canvas
+x-enrichment-note: 'facet.ai HTTP 301 -> www.vsco.co/features/canvas (verified 2026-07-19);
+  HTTPS on facet.ai times out; MarkMonitor nameservers; no SPF/DMARC/TXT records. No API,
+  docs, SDK, or developer surface found — nothing enrichable.'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Consumer
+- Photography
+- Design
+- Artificial Intelligence
+- Image Editing
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +50,10 @@ maintainers:
 common:
 - type: Website
   url: http://www.facet.ai
+- type: Successor
+  url: https://www.vsco.co/features/canvas
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
