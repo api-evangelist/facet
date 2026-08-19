@@ -30,7 +30,7 @@ x-redirects-to: https://www.vsco.co/features/canvas
 x-enrichment-note: 'facet.ai HTTP 301 -> www.vsco.co/features/canvas (verified 2026-07-19);
   HTTPS on facet.ai times out; MarkMonitor nameservers; no SPF/DMARC/TXT records. No API,
   docs, SDK, or developer surface found — nothing enrichable.'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
